@@ -5,12 +5,14 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('1.1.0.3');
+
   api.use([
     'underscore',
-    'aldeed:tabular',
     'templating',
-    'aldeed:template-extension',
-    'vsivsi:job-collection'
+    'aldeed:tabular@1.4.0',
+    'aldeed:template-extension@3.4.3',
+    'vsivsi:job-collection@1.2.3'
   ]);
 
   api.addFiles([
