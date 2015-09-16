@@ -1,7 +1,7 @@
 Package.describe({
   name: 'dispatch:tabular-job-collection',
   summary: "Easy admin tables for vsivsi:job-collection using aldeed:tabular",
-  version: '0.0.1'
+  version: '0.0.2'
 });
 
 Package.onUse(function (api) {
