@@ -33,3 +33,13 @@ Now include your table anywhere in your client markup, as described in the `alde
 ```
 {{> tabular table=TabularJobCollections.taskQueue class="table table-hover"}}
 ```
+
+## Security
+
+By default anyone can call the server methods that the table buttons call to delete, retry, etc. the jobs. You can secure them by overriding the `TabularJobCollections.authenticateMethods` function in your server code.
+
+```js
+TabularJobCollections.authenticateMethods = function (userId) {
+  // Look up role or something to return true or false
+};
+```
