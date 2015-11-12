@@ -1,7 +1,8 @@
 Package.describe({
   name: 'dispatch:tabular-job-collection',
   summary: "Easy admin tables for vsivsi:job-collection using aldeed:tabular",
-  version: '0.0.2'
+  version: '0.0.4',
+  git: 'https://github.com/DispatchMe/meteor-tabular-job-collection'
 });
 
 Package.onUse(function (api) {
@@ -14,6 +15,10 @@ Package.onUse(function (api) {
     'aldeed:template-extension@3.4.3',
     'vsivsi:job-collection@1.2.3'
   ]);
+
+  api.use([
+    'momentjs:moment@2.10.6'
+  ], 'client', {weak: true});
 
   api.addFiles([
     'lib/both/tabular-job-collection.js'
